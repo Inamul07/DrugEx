@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="yellow_500">#FFC10A</color>
     <color name="status">#A4978E</color>
+    <color name="btnTerms">#0F0E0E</color>
 </resources>
