@@ -1,20 +1,367 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_gravity="center"
-    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ReportActivity">
 
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:backgroundTint="@color/yellow_500"
-        android:text="Hello World!!!"
-        android:elevation="10dp"/>
+        android:background="@drawable/report_bg"
+        android:orientation="vertical">
 
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_baseline_menu"/>
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="35dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About the incident: "
+                android:layout_marginStart="15dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Incident Description: (*)"
+                android:layout_marginStart="15dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/inc_desc"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="What did you see or hear?"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="187.5dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Incident Date: (*)"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/inc_date"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:hint="dd/mm/yyyy"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="50dp"
+                        android:background="@color/white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Transport Method:"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/transport_method"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="50dp"
+                        android:background="@color/white"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="187.5dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Trafficking Type:"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/trafficking_type"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@color/white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="City: (*)"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/city"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@color/white"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address: (*)"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="About the potential victim:"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="187.5dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Gender: (*)"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/gender"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="50dp"
+                        android:background="@color/white"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="187.5dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Approx. Age:"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/approx_age"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@color/white"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Appearance: (*)"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/appearance"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Other Info: "
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/other_info"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="No. of persons: "
+                    android:layout_marginStart="15dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+                <EditText
+                    android:id="@+id/num_of_persons"
+                    android:layout_width="187.5dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/white"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Upload any evidence if possible"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_evidence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:text="Add Photo/ Video"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We will hold your data securely and not share any details about you or your identity with a third party unless we are compelled by law to do so."
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_submit"
+                android:layout_width="316dp"
+                android:layout_height="62.25dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/btn_bg"
+                android:text="submit securely"
+                android:textColor="@color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:orientation="horizontal"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
