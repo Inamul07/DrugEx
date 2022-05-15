@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "960774289426",
+    "firebase_url": "https://drugex-296eb-default-rtdb.firebaseio.com",
+    "project_id": "drugex-296eb",
+    "storage_bucket": "drugex-296eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960774289426:android:e5668f7cf361b3bfa900cb",
+        "android_client_info": {
+          "package_name": "com.application.drugex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "960774289426-ij3ieseht95lavoai908qpas0vd5c5h4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.application.drugex",
+            "certificate_hash": "8b2b6de4a318a13cddde6bed0c169f395160c9f3"
+          }
+        },
+        {
+          "client_id": "960774289426-5a0t2plsdensjttgm25ak0q2jlkh8md2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoY0jwdkLEKsdMkvVxh-6TrjUr8Wjr7jQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "960774289426-5a0t2plsdensjttgm25ak0q2jlkh8md2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

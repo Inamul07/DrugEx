@@ -20,7 +20,7 @@ public class AppreciationActivity extends AppCompatActivity {
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(AppreciationActivity.this, ReportActivity.class));
+                startActivity(new Intent(AppreciationActivity.this, HomeActivity.class));
                 finish();
             }
         });

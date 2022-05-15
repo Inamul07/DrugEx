@@ -49,7 +49,7 @@ public class TermsActivity extends AppCompatActivity {
     }
 
     private void start() {
-        startActivity(new Intent(TermsActivity.this, ReportActivity.class));
+        startActivity(new Intent(TermsActivity.this, HomeActivity.class));
         finish();
     }
 }
