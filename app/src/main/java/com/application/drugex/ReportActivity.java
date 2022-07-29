@@ -12,7 +12,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,7 +29,6 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-import java.util.Date;
 import java.util.UUID;
 
 public class ReportActivity extends AppCompatActivity {
@@ -138,10 +136,7 @@ public class ReportActivity extends AppCompatActivity {
                         txtNumOfPersons = null;
                     }
 
-                    Post post = new Post(txtDesc, txtDate, txtTraffickingType, txtTransportMethod, txtCity, txtAddress, txtGender, txtAge, txtAppearance, txtOtherInfo, txtNumOfPersons);
                     String randomKey = UUID.randomUUID().toString();
-
-                    databaseReference.child("posts").child(randomKey).setValue(post);
 
                     StorageReference picRef = storageReference.child("posts/" + randomKey);
                     ProgressDialog pd = new ProgressDialog(ReportActivity.this);
@@ -170,6 +165,9 @@ public class ReportActivity extends AppCompatActivity {
                                     pd.setMessage("Progress: " + (int) percent + "%");
                                 }
                             });
+
+                    Post post = new Post(txtDesc, txtDate, txtTraffickingType, txtTransportMethod, txtCity, txtAddress, txtGender, txtAge, txtAppearance, txtOtherInfo, txtNumOfPersons);
+                    databaseReference.child("posts").child(randomKey).setValue(post);
 
                     Toast.makeText(ReportActivity.this, "Your message is received in our servers", Toast.LENGTH_LONG).show();
                     startActivity(new Intent(ReportActivity.this, AppreciationActivity.class));
